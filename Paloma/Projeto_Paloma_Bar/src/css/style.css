@@ -170,7 +170,7 @@ object-fit: cover;
 
 .produto-nome {
     font-size: 1.1rem;
-    color: #FDE882;
+    color: #5E3F3B;
     font-weight: 500;
 }
 
@@ -280,49 +280,58 @@ object-fit: cover;
     overflow: hidden; 
     transition: max-height 0.4s ease-out; 
 }
-/* ---------------------------------------------------------------------------------*/
-/* -                           Palmeiras.                             -*/
-/* ---------------------------------------------------------------------------------*/
+/* --------------------------------------------------------- */
+/* - Palmeiras (Mobile First) - */
+/* --------------------------------------------------------- */
 
 /* Palmeira Lado Esquerdo */
 body::before {
-    content: "";
-    position: fixed;
-    bottom: -150px; 
-    left: -350px; 
-    width: 1100px;  
-    height: 1100px; 
-    
-    background-image: url('../img/palmeira.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    
-    z-index: -1; 
-    pointer-events: none; 
-    opacity: 0.8; 
+  content: "";
+  position: fixed;
+  bottom: -150px;
+  left: -700px; 
+  width: 1100px;
+  height: 1100px;
+  background-image: url('../img/palmeira.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.8;
 }
 
-/*  Palmeira Lado Direito */
+/* Palmeira Lado Direito*/
 body::after {
-    content: "";
-    position: fixed;
-    bottom: -150px;
+  content: "";
+  position: fixed;
+  bottom: -150px;
+  right: -950px; 
+  width: 1100px;
+  height: 1100px;
+  background-image: url('../img/palmeira.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  transform: scaleX(-1);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------------- */
+/* - Ajuste para PC (Desktop) - */
+/* --------------------------------------------------------- */
+@media (min-width: 768px) {
+  body::before {
+    /* Repõe o teu valor original no PC */
+    left: -350px; 
+  }
+  
+  body::after {
+    /* Repõe o teu valor original no PC */
     right: -850px; 
-    width: 1100px; 
-    height: 1100px;
-    
-    background-image: url('../img/palmeira.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    
-    
-    transform: scaleX(-1); 
-    
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.8;
+  }
 }
 /* ---------------------------------------------------------------------------------*/
 /* -                           Assinatura                                          -*/
@@ -358,7 +367,7 @@ body::after {
 
 @media (min-width: 768px) {
     body {
-        padding: 60px; 
+        padding: 60px;
     }
 
     .menu-container {
@@ -366,5 +375,12 @@ body::after {
         flex-direction: column;
         max-width: 600px;
         margin: 0 auto;
+    }
+    body::before {
+        left: -350px; 
+    }
+    
+    body::after {
+        right: -850px; 
     }
 }
