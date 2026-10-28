@@ -284,12 +284,13 @@ object-fit: cover;
 /* - Palmeiras (Mobile First) - */
 /* --------------------------------------------------------- */
 
-/* Palmeira Lado Esquerdo */
+/* Palmeira Lado Esquerdo (Padrão para Telemóvel) */
 body::before {
   content: "";
   position: fixed;
   bottom: -150px;
-  left: -700px; 
+  /* AUMENTAR O VALOR NEGATIVO AQUI PARA MOBILE (ex: -600px ou -700px) */
+  left: -450px; 
   width: 1100px;
   height: 1100px;
   background-image: url('../img/palmeira.png');
@@ -301,11 +302,12 @@ body::before {
   opacity: 0.8;
 }
 
-/* Palmeira Lado Direito*/
+/* Palmeira Lado Direito (Padrão para Telemóvel) */
 body::after {
   content: "";
   position: fixed;
   bottom: -150px;
+  /* AUMENTAR O VALOR NEGATIVO AQUI PARA MOBILE (ex: -950px ou -1000px) */
   right: -950px; 
   width: 1100px;
   height: 1100px;
@@ -319,20 +321,6 @@ body::after {
   opacity: 0.8;
 }
 
-/* --------------------------------------------------------- */
-/* - Ajuste para PC (Desktop) - */
-/* --------------------------------------------------------- */
-@media (min-width: 768px) {
-  body::before {
-    /* Repõe o teu valor original no PC */
-    left: -350px; 
-  }
-  
-  body::after {
-    /* Repõe o teu valor original no PC */
-    right: -850px; 
-  }
-}
 /* ---------------------------------------------------------------------------------*/
 /* -                           Assinatura                                          -*/
 /* ---------------------------------------------------------------------------------*/
@@ -377,10 +365,10 @@ body::after {
         margin: 0 auto;
     }
     body::before {
-        left: -350px; 
+        left: -350px; /*-350*/ 
     }
     
     body::after {
-        right: -850px; 
+        right: -850px; /*-850*/
     }
 }
