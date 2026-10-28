@@ -40,7 +40,7 @@ object-fit: cover;
     max-width: 450px;    
     padding: 22px;         
     background-color: #FDE882; 
-    color: #8B4513;
+    color: #5E3F3B;
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;     
@@ -73,7 +73,7 @@ object-fit: cover;
 }
 
 .icon-rodape {
-    color: #8B4513;          
+    color: #5E3F3B;          
     font-size: 2.5rem;       
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease; 
@@ -124,7 +124,7 @@ object-fit: cover;
 /* ---------------------------------------------------------------------------------*/
 .botao-voltar {
     display: inline-block;
-    color: #8B4513;
+    color: #5E3F3B;
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 25px;
