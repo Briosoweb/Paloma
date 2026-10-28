@@ -124,7 +124,7 @@ object-fit: cover;
 /* ---------------------------------------------------------------------------------*/
 .botao-voltar {
     display: inline-block;
-    color: #2D5A3C;
+    color: #8B4513;
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 25px;
@@ -171,12 +171,12 @@ object-fit: cover;
 .produto-nome {
     font-size: 1.1rem;
     color: #5E3F3B;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .produto-preco {
     font-size: 1.1rem;
-    color: #2D5A3C;
+    color: #22422B;
     font-weight: bold;
     white-space: nowrap;
     text-align: right;
